@@ -1,15 +1,16 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Add jk -> Normal mode 
+call plug#begin('~/.vim/plugged')
+Plug 'christoomey/vim-tmux-navigator'
+call plug#end()
+
 inoremap jk <ESC>
 
-" Change appearance
 set background=dark
 set number
 syntax on
 set encoding=utf-8
+
 filetype plugin indent on
 
 " show existing tab with 4 spaces width
@@ -25,7 +26,6 @@ autocmd BufWinEnter *.* silent loadview
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
-" Only works all the time.
 if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
   set undodir=~/.vim/backups
@@ -44,3 +44,5 @@ runtime macros/matchit.vim
 " More useful tab completion
 set wildmode=list:longest
 
+" Enable omni completion
+set omnifunc=syntaxcomplete#Complete
