@@ -9,7 +9,8 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vimwiki/vimwiki'
-Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'joshdick/onedark.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -21,7 +22,6 @@ runtime macros/matchit.vim
 let mapleader = " "
 let g:is_posix =1 " Use Bash syntax highlighting for scripts
 set ttimeoutlen=10
-set spell
 set autoread
 set hidden
 set history=50
@@ -36,6 +36,7 @@ set sidescrolloff=5
 set display+=lastline
 set number
 set encoding=utf-8
+set nospell
 set autoindent
 set backspace=indent,eol,start
 set shiftwidth=4
@@ -53,12 +54,11 @@ if (empty($TMUX))
     endif
 endif
 colorscheme onedark
-set t_ut= " Disable background color erase because I didn't change my
+"set t_ut= " Disable background color erase because I didn't change my
 " terminal's background to math the color scheme
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#disable_rtp_load = 1
 
 " === Persistent Folding ===
 set viewoptions-=options " Don't save current directory with view
