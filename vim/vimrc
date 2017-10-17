@@ -56,8 +56,6 @@ if (empty($TMUX))
     endif
 endif
 colorscheme onedark
-"set t_ut= " Disable background color erase because I didn't change my
-" terminal's background to math the color scheme
 let g:airline_theme='onedark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
