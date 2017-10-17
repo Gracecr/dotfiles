@@ -6,7 +6,7 @@
 
 ########## Variables
 dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+olddir=~/dotfiles/dotfiles_old    # old dotfiles backup directory
 files="tmuxline tmux.conf vim"    # list of files/folders to symlink in homedir
 
 # create dotfiles_old in homedir
