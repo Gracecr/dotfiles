@@ -44,6 +44,7 @@ set backspace=indent,eol,start
 set shiftwidth=4
 set smarttab
 set expandtab
+set smartcase
 if !exists("g:syntax_on")
     syntax enable
 endif
@@ -74,4 +75,9 @@ endif
 
 " === Custom Key Bindings ===
 nnoremap Y y$
-
+nnoremap <leader>r :source $MYVIMRC<Enter>
+nnoremap <leader>s mzeF$yef$vep2F$vep`z
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
